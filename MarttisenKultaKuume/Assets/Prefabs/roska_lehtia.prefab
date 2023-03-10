@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8239903078170607345}
   - component: {fileID: 4375116363909122639}
+  - component: {fileID: 191733742599131895}
   m_Layer: 0
   m_Name: roska_lehtia
   m_TagString: Untagged
@@ -46,6 +47,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floatSpeed: {x: 0, y: 0, z: 0}
+--- !u!65 &191733742599131895
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8239903078170607358}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9499651, y: 1.811162, z: 0.1512003}
+  m_Center: {x: 0.029405534, y: 0.09770143, z: 0.0050661564}
 --- !u!1 &8239903078418609520
 GameObject:
   m_ObjectHideFlags: 0

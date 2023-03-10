@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6216504709664259827}
   - component: {fileID: 2178445665253918928}
+  - component: {fileID: 4016996689040054720}
   m_Layer: 0
   m_Name: roska_kivi
   m_TagString: Roska
@@ -46,6 +47,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floatSpeed: {x: 0, y: 0, z: 0}
+--- !u!65 &4016996689040054720
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6216504709664259824}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9499651, y: 1.811162, z: 0.1512003}
+  m_Center: {x: 0.029405534, y: 0.09770143, z: 0.0050661564}
 --- !u!1 &6216504709992954978
 GameObject:
   m_ObjectHideFlags: 0
