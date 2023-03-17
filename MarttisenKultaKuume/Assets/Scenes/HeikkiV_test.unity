@@ -893,7 +893,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dc1d1dda6d0696d4399dcb6121f14a23, type: 2}
+  - {fileID: 2100000, guid: d414ace2d3d42ed40b51e954a3b14eab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -955,6 +955,7 @@ GameObject:
   - component: {fileID: 2122159811}
   - component: {fileID: 2122159813}
   - component: {fileID: 2122159812}
+  - component: {fileID: 2122159814}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1032,7 +1033,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e5600378dd761e64d9423790c482bf36, type: 3}
+  m_Sprite: {fileID: -1867093161, guid: 420f0ad4995c4bb419c050cae036616b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1070,7 +1071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54da7415f7cb5ed489b8b966a5bb11d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 5
 --- !u!114 &2122159810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1170,3 +1171,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af142c74caf72e8439ab7a01059ad034, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &2122159814
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122159804}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 78d1569d1cad95b469db95efa535fb9d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
