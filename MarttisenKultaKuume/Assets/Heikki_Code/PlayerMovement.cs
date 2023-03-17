@@ -21,10 +21,14 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    void Update()
+    {
+        UpdateAnimator(rigBod.velocity);
+    }
+
     void FixedUpdate()
     {
         rigBod.velocity = new Vector3(input.GetMoveInput().x, 0, input.GetMoveInput().y) * speed;
-        UpdateAnimator(rigBod.velocity);
     }
 
     private void UpdateAnimator(Vector3 movement)
