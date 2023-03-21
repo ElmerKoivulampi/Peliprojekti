@@ -7,6 +7,7 @@ using UnityEngine;
 public class JokiSpawnManager : MonoBehaviour
 {
     [SerializeField] private float spawnZoneWidth = 0.0f;
+    [SerializeField] private float objectLifeTimeInDistance = 512.0f;
     [SerializeField] private GameObject[] spawnObjects;
     private float lastSpawnTime = 0.0f;
     [SerializeField] private float spawnFreqMin = 0.2f;
@@ -44,9 +45,13 @@ public class JokiSpawnManager : MonoBehaviour
         Gizmos.DrawLine(forwardPos, forwardPos - transform.forward * 0.33f - transform.right * 0.33f);
     }
 
-    void Start()
+    public void EndCleanup()
     {
-       
+        JokiObject[] objects = GetComponentsInChildren<JokiObject>();
+        foreach(JokiObject jokiobj in objects)
+        {
+            GameObject.Destroy(jokiobj.gameObject);
+        }
     }
     void Update()
     {
@@ -72,6 +77,8 @@ public class JokiSpawnManager : MonoBehaviour
             return;
         }
 
+        obj.transform.SetParent(transform);
+
         JokiObject jokiObj = obj.GetComponent<JokiObject>();
         if(jokiObj == null)
         {
@@ -80,6 +87,7 @@ public class JokiSpawnManager : MonoBehaviour
         }
 
         jokiObj.SetFloatSpeed(transform.forward * UnityEngine.Random.Range(floatSpeedMin, floatSpeedMax));
+        jokiObj.SetLifetime(objectLifeTimeInDistance);
         lastSpawnTime = Time.time + UnityEngine.Random.Range(spawnFreqMin, spawnFreqMax);
     }
 }

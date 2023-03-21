@@ -9,10 +9,12 @@ public class InputHandler : MonoBehaviour
     private Vector2 moveInput = Vector2.zero;
 
     private Animator animator;
+    private PlayerMovement player;
 
     private void Awake()
     {
         this.animator = GetComponent<Animator>();
+        player = GetComponent<PlayerMovement>();
     }
 
     private void Update()
@@ -24,9 +26,13 @@ public class InputHandler : MonoBehaviour
         moveInput = moveContext.ReadValue<Vector2>();
     }
 
-    public void OnUse()
+    public void OnUse(InputAction.CallbackContext ctx)
     {
-        Debug.Log("use");
+        if(ctx.phase == InputActionPhase.Started)
+        {
+            Debug.Log("use");
+            player.OnUse();
+        }
     }
 
     public Vector2 GetMoveInput()

@@ -14,11 +14,12 @@ public class PlayerMovement : MonoBehaviour
     private const string AnimatorZ = "Look Z";
     private const string AnimatorSpeed = "Speed";
 
+    private IUsableObject lastUsableObject = null;
     void Awake()
     {
         rigBod = GetComponent<Rigidbody>();
         input = GetComponent<InputHandler>();
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -28,7 +29,25 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        rigBod.velocity = new Vector3(input.GetMoveInput().x, 0, input.GetMoveInput().y) * speed;
+        rigBod.velocity = new Vector3(input.GetMoveInput().x, 0.0f, input.GetMoveInput().y) * speed;
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        lastUsableObject = other.GetComponent<IUsableObject>();
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        lastUsableObject = null;
+    }
+
+    public void OnUse()
+    {
+        if(lastUsableObject == null)
+            return;
+
+        lastUsableObject.Use();
     }
 
     private void UpdateAnimator(Vector3 movement)

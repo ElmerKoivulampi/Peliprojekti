@@ -36,6 +36,14 @@ public class ShopManager : MonoBehaviour
         CheckPurchaseable();
     }
 
+    //variant for when the player eventually washes the contents of the gold pan.
+    public void AddGold(int amt)
+    {
+        gold += amt;
+        goldUI.text = "Gold: " + gold.ToString();
+        CheckPurchaseable();
+    }
+
     public void CheckPurchaseable()
     {
         for (int i = 0; i < shopItemsSO.Length; i++)
