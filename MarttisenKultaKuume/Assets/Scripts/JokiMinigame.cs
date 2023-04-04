@@ -9,7 +9,7 @@ public class JokiMinigame : MonoBehaviour
     JokiSpawnManager minigameSpawnMan;
     VatiController vati;
     GameObject player;
-    GameObject ui;
+    [SerializeField] public Canvas canvas;
     void Start()
     {
         worldCam = Camera.main;
@@ -17,13 +17,12 @@ public class JokiMinigame : MonoBehaviour
         minigameSpawnMan = minigame.GetComponentInChildren<JokiSpawnManager>();
         vati = minigame.GetComponentInChildren<VatiController>();
         player = GameObject.Find("Player");
-        ui = GameObject.Find("UI");
     }
 
     public void StartMinigame()
     {
         player.SetActive(false);
-        ui.SetActive(false);
+        canvas.GetComponent<UIDisabler>().HideUI();
         worldCam.gameObject.SetActive(false);
         minigame.SetActive(true);
 
@@ -37,6 +36,6 @@ public class JokiMinigame : MonoBehaviour
         minigame.SetActive(false);
         worldCam.gameObject.SetActive(true);
         player.SetActive(true);
-        ui.SetActive(true);
+        canvas.GetComponent<UIDisabler>().ShowUI();
     }
 }
