@@ -16,6 +16,9 @@ public class ShopManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // ADD PLAYERPREF GOLD AMOUNT TO THE SHOP MENU GOLD AMOUNT
+        AddGold(PlayerPrefs.GetInt("Gold"));
+
         for (int i = 0; i < shopItemsSO.Length; i++)
             shopPanelsGO[i].SetActive(true);
         goldUI.text = "Gold: " + gold.ToString();
@@ -34,6 +37,7 @@ public class ShopManager : MonoBehaviour
         gold++;
         goldUI.text = "Gold: " + gold.ToString();
         CheckPurchaseable();
+        SaveGoldPlayerPref();
     }
 
     //variant for when the player eventually washes the contents of the gold pan.
@@ -42,6 +46,7 @@ public class ShopManager : MonoBehaviour
         gold += amt;
         goldUI.text = "Gold: " + gold.ToString();
         CheckPurchaseable();
+        SaveGoldPlayerPref();
     }
 
     public void CheckPurchaseable()
@@ -62,6 +67,7 @@ public class ShopManager : MonoBehaviour
             gold = gold - shopItemsSO[btnNo].baseCost;
             goldUI.text = "Gold: " + gold.ToString();
             CheckPurchaseable();
+            SaveGoldPlayerPref();
         }
     }
 
@@ -73,5 +79,17 @@ public class ShopManager : MonoBehaviour
             shopPanels[i].descriptionTxt.text = shopItemsSO[i].description;
             shopPanels[i].costTxt.text = "Gold: " + shopItemsSO[i].baseCost.ToString();
         }
+    }
+
+    public void SaveGoldPlayerPref()
+    {
+        PlayerPrefs.SetInt("Gold", gold);
+    }
+
+    public void ClearGold()
+    {
+        gold = 0;
+        goldUI.text = "Gold: " + gold.ToString();
+        PlayerPrefs.SetInt("Gold", 0);
     }
 }
