@@ -1100,7 +1100,6 @@ MonoBehaviour:
   spawnObjects:
   - {fileID: 5176919846685549428, guid: b23afc1065497a64984fb45fbe0af63e, type: 3}
   - {fileID: 6216504709664259824, guid: 37cb088fbff03e9409064f0511d4b4d4, type: 3}
-  - {fileID: 8239903078170607358, guid: f53da0938ce5ca245ba167d9c4871d80, type: 3}
   - {fileID: 3903796749245091053, guid: 46457d2c6b4ca314191c4d7c8cb75b4a, type: 3}
   spawnFreqMin: 0.33
   spawnFreqMax: 0.66
@@ -1382,7 +1381,7 @@ Transform:
   m_GameObject: {fileID: 1653012271}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.5, z: 1}
+  m_LocalScale: {x: 2, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 75449416}
@@ -1835,7 +1834,7 @@ Terrain:
   m_DrawTreesAndFoliage: 1
   m_StaticShadowCaster: 0
   m_ReflectionProbeUsage: 1
-  m_MaterialTemplate: {fileID: 2100000, guid: 594ea882c5a793440b60ff72d896021e, type: 2}
+  m_MaterialTemplate: {fileID: 2100000, guid: cb8d96d7835ca42409a177414bba3ec7, type: 2}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
