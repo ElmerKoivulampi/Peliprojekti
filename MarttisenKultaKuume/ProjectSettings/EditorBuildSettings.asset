@@ -12,9 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: c27ce1190c4c60649a1af06995db20c2
   - enabled: 1
+    path: Assets/Scenes/oikeapelifinalmaster.unity
+    guid: d43dd31f3657423eea7ee3d7a2bd8f5a
+  - enabled: 0
     path: Assets/Scenes/ShopMenu.unity
     guid: e03926704d747cc4faa0f9df312a1a0e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/World.unity
     guid: 426f625bdc64f8879b5dca6bdeb8d3c4
   m_configObjects:

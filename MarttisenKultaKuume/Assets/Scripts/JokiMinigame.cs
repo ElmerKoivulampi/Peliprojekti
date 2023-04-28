@@ -17,13 +17,14 @@ public class JokiMinigame : MonoBehaviour
         minigameSpawnMan = minigame.GetComponentInChildren<JokiSpawnManager>();
         vati = minigame.GetComponentInChildren<VatiController>();
         player = GameObject.Find("Player");
+        StartMinigame();
     }
 
     public void StartMinigame()
     {
-        player.SetActive(false);
-        canvas.GetComponent<UIDisabler>().HideUI();
-        worldCam.gameObject.SetActive(false);
+        //player.SetActive(false);
+        //canvas.GetComponent<UIDisabler>().HideUI();
+        //worldCam.gameObject.SetActive(false);
         minigame.SetActive(true);
 
         vati.EmptyCarry(); // DEBUG DEBUG DEBUG

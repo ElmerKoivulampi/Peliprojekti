@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class VatiController : MonoBehaviour
 {
@@ -13,11 +16,15 @@ public class VatiController : MonoBehaviour
     Vector2 lastTouchPosition = Vector2.zero;
     [SerializeField] Slider fillbar;
     JokiMinigame miniGamePointer;
+    public GoldUIText textPointer;
+    public TextMeshProUGUI stateText;
+    bool dead = false;
 
     private void Awake()
     {
         cam = Camera.main;
         miniGamePointer = GameObject.Find("JokiMinigame").GetComponent<JokiMinigame>();
+        stateText.text = "";
     }
 
     public void SetMaxCarry(int amt)
@@ -54,12 +61,13 @@ public class VatiController : MonoBehaviour
 
     private void Update()
     {
-        if(Mouse.current.wasUpdatedThisFrame)
-        {
-            lastTouchPosition = Mouse.current.position.ReadValue();
-        }else{
+        if(dead) { return; }
+        //if(Mouse.current.wasUpdatedThisFrame)
+        ///{
+        //    lastTouchPosition = Mouse.current.position.ReadValue();
+        //}else{
             lastTouchPosition = Touchscreen.current.position.ReadValue();
-        }
+        //}
 
         Vector3 worldPos = cam.ScreenToWorldPoint(new Vector3(lastTouchPosition.x, lastTouchPosition.y, cam.transform.position.y - transform.position.y));
         worldPos.y = transform.position.y;
@@ -67,22 +75,35 @@ public class VatiController : MonoBehaviour
 
         transform.position = worldPos;
 
-        if(GetCurrentCarryTotalAmount() >= GetMaxCarry())
+        /*if(GetCurrentCarryTotalAmount() >= GetMaxCarry())
         {
             Debug.Log("Ending minigame");
             miniGamePointer.EndMinigame();
-        }
+        }*/
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        if(dead) { return; }
         if(other.gameObject.CompareTag("Kultapala"))
         {
             currentCarryGold++;
+            textPointer.gold = currentCarryGold;
+            Destroy(other.gameObject);
+            return;
         }
 
+        textPointer.gold = currentCarryGold;
         currentCarryTotal++;
         UpdateFillBar();
         Destroy(other.gameObject);
+        stateText.text = string.Format("You lose! Score: {0}", currentCarryGold);
+        dead = true;
+        Invoke("kicktomenu", 5.0f);
+    }
+
+    void kicktomenu()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }

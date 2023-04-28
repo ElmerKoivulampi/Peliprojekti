@@ -24,7 +24,7 @@ public class ShopSceneDisabler : MonoBehaviour
 
     public void EndShop()
     {
-        goldText.GetComponent<GoldUIText>().LoadGold();
+        //goldText.GetComponent<GoldUIText>().LoadGold();
         if (worldCam != null)
         {
             worldCam.SetActive(true);

@@ -7,8 +7,8 @@ using TMPro;
 public class GoldUIText : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI goldAmount;
-    private int gold;
-
+    public int gold = 0;
+    /*
     private void Start()
     {
         gold = PlayerPrefs.GetInt("Gold");
@@ -19,5 +19,11 @@ public class GoldUIText : MonoBehaviour
     {
         gold = PlayerPrefs.GetInt("Gold");
         goldAmount.text = "Gold: " + gold.ToString();
+    }*/
+
+    void Update()
+    {
+        goldAmount.text = string.Format("Gold: {0}", gold);
     }
+
 }
