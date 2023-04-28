@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
+using UnityEngine.Localization;
 public class GoldUIText : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI goldAmount;
     public int gold = 0;
+    public LocalizedString localizedString;
     /*
     private void Start()
     {
@@ -23,7 +24,7 @@ public class GoldUIText : MonoBehaviour
 
     void Update()
     {
-        goldAmount.text = string.Format("Gold: {0}", gold);
+        goldAmount.text = string.Format("{0} {1}", localizedString, gold);
     }
 
 }

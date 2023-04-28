@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
+using UnityEngine.Localization;
 using UnityEngine.SceneManagement;
 using TMPro;
 
@@ -19,7 +19,7 @@ public class VatiController : MonoBehaviour
     public GoldUIText textPointer;
     public TextMeshProUGUI stateText;
     bool dead = false;
-
+    public LocalizedString localizedString;
     private void Awake()
     {
         cam = Camera.main;
@@ -97,7 +97,7 @@ public class VatiController : MonoBehaviour
         currentCarryTotal++;
         UpdateFillBar();
         Destroy(other.gameObject);
-        stateText.text = string.Format("You lose! Score: {0}", currentCarryGold);
+        stateText.text = string.Format("{0} {1}", localizedString, currentCarryGold);
         dead = true;
         Invoke("kicktomenu", 5.0f);
     }

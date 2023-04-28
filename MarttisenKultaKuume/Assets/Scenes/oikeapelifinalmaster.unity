@@ -272,6 +272,18 @@ MonoBehaviour:
   fillbar: {fileID: 488599562}
   textPointer: {fileID: 468978406}
   stateText: {fileID: 650365772}
+  localizedString:
+    m_TableReference:
+      m_TableCollectionName: GUID:6217ffc2d20e2364f8cb9af1b73cf688
+    m_TableEntryReference:
+      m_KeyId: 2540489043267584
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!65 &75449418
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -605,6 +617,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goldAmount: {fileID: 468978404}
   gold: 0
+  localizedString:
+    m_TableReference:
+      m_TableCollectionName: GUID:6217ffc2d20e2364f8cb9af1b73cf688
+    m_TableEntryReference:
+      m_KeyId: 2540788709511168
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &488599560
 GameObject:
   m_ObjectHideFlags: 0
