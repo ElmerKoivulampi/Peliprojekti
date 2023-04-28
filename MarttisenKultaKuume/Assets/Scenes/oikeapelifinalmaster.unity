@@ -1101,6 +1101,7 @@ MonoBehaviour:
   - {fileID: 5176919846685549428, guid: b23afc1065497a64984fb45fbe0af63e, type: 3}
   - {fileID: 6216504709664259824, guid: 37cb088fbff03e9409064f0511d4b4d4, type: 3}
   - {fileID: 3903796749245091053, guid: 46457d2c6b4ca314191c4d7c8cb75b4a, type: 3}
+  - {fileID: 3903796749245091053, guid: 46457d2c6b4ca314191c4d7c8cb75b4a, type: 3}
   spawnFreqMin: 0.33
   spawnFreqMax: 0.66
   floatSpeedMin: 4
