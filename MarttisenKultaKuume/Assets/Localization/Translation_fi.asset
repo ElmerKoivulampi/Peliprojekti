@@ -30,6 +30,26 @@ MonoBehaviour:
     m_Localized: 'Kultaa:'
     m_Metadata:
       m_Items: []
+  - m_Id: 2543182725959680
+    m_Localized: aloita
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2543245397250048
+    m_Localized: asetukset
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2543278268010496
+    m_Localized: "Tekij\xE4t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2543591859343360
+    m_Localized: Kieli
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2544160179146752
+    m_Localized: Takaisin
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

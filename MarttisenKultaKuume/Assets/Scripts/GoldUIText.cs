@@ -24,7 +24,7 @@ public class GoldUIText : MonoBehaviour
 
     void Update()
     {
-        goldAmount.text = string.Format("{0} {1}", localizedString, gold);
+        goldAmount.text = string.Format("{0} {1}", localizedString.GetLocalizedString(), gold);
     }
 
 }

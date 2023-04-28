@@ -27,6 +27,26 @@ MonoBehaviour:
     m_Key: gold
     m_Metadata:
       m_Items: []
+  - m_Id: 2543182725959680
+    m_Key: play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2543245397250048
+    m_Key: options
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2543278268010496
+    m_Key: credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2543591859343360
+    m_Key: language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2544160179146752
+    m_Key: back
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

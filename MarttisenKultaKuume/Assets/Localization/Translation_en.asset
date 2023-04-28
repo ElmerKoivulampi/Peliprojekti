@@ -30,6 +30,26 @@ MonoBehaviour:
     m_Localized: 'Gold:'
     m_Metadata:
       m_Items: []
+  - m_Id: 2543182725959680
+    m_Localized: Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2543245397250048
+    m_Localized: Options
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2543278268010496
+    m_Localized: Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2543591859343360
+    m_Localized: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2544160179146752
+    m_Localized: Back
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

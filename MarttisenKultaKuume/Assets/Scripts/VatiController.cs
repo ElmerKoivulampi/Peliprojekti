@@ -97,7 +97,7 @@ public class VatiController : MonoBehaviour
         currentCarryTotal++;
         UpdateFillBar();
         Destroy(other.gameObject);
-        stateText.text = string.Format("{0} {1}", localizedString, currentCarryGold);
+        stateText.text = string.Format("{0} {1}", localizedString.GetLocalizedString(), currentCarryGold);
         dead = true;
         Invoke("kicktomenu", 5.0f);
     }
